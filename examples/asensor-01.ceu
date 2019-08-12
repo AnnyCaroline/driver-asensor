@@ -1,0 +1,13 @@
+// Tested with KEYES KY-03 touch sensor
+
+#include "asensor.ceu"
+#include "wclock.ceu"
+
+_Serial.begin(9600);
+_Serial.println("init");
+
+loop do
+    var int v = await ASensor(_A0, 7, _);
+    _Serial.println(v);
+    await 1s;
+end
