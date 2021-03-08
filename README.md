@@ -13,7 +13,7 @@
 #### ASensor
 
 ```
-code/await ASensor(var int dataPort, var int? energyPort, var int? time) -> int;
+code/await ASensor_Get(var int dataPort, var int? energyPort, var int? time) -> int;
 ```
 
 Parameters:

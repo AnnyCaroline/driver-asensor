@@ -6,8 +6,10 @@
 _Serial.begin(9600);
 _Serial.println("init");
 
+var& ASensor_A0 mysensor = spawn ASensor_A0(_A0, 7, _);
+
 loop do
-    var int v = await ASensor_Get(_A0, 7, _);
+    var int v = await mysensor.value;
     _Serial.println(v);
     await 1s;
 end
